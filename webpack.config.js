@@ -1,12 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './public'),
-    filename: 'bundle.[hash].js'
+    filename: 'bundle.[hash].js',
+    publicPath: '/',
   },
   mode: 'development',
   devtool: 'inline-source-map',
@@ -41,9 +43,11 @@ module.exports = {
     static: './public',
     historyApiFallback: true,
     open: true,
+    hot: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({template: './src/index.html'})
+    new HtmlWebpackPlugin({template: './src/index.html'}),
+    new ReactRefreshWebpackPlugin(),
   ]
 
 };
