@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Hack';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('../../assets/fonts/Hack.ttf');
+}
+
+html, body {
+  font-family: 'Hack', monospace;
+}
+
+.test {
+  border: 2px solid teal;
+  border-radius: 5px;
+}
