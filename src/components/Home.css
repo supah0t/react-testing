@@ -9,8 +9,3 @@
 html, body {
   font-family: 'Hack', monospace;
 }
-
-.test {
-  border: 2px solid teal;
-  border-radius: 5px;
-}

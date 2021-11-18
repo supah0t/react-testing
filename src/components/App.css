@@ -1,0 +1,16 @@
+.menu {
+    display: inline;
+    margin: 40px;
+    background-color: wheat;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.menu:hover { background-color: pink; }
+
+.bar {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid tan;
+}

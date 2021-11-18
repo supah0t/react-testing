@@ -4,7 +4,7 @@ import Styles from './Home.css';
 const Home = () => {
   return (
     <>
-    <h2 className={Styles.test}>Hello, new clean app</h2>
+    <h2 className={Styles.test}>Hello, new clean app, damn</h2>
     </>
   );
 }

@@ -18,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       },
@@ -50,7 +50,7 @@ module.exports = {
     historyApiFallback: true,
     open: true,
     hot: true,
-    proxy: {'/api': 'http://localhost:3000/'},
+    //proxy: {'/api': 'http://localhost:3000/'},
   },
   plugins: [
     new HtmlWebpackPlugin({template: './src/index.html'}),
