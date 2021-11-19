@@ -12,10 +12,18 @@ const App = () => {
   return (
       <Router basename="/">
         <div className={MenuStyle.bar}>
-          <nav className={MenuStyle.menu}><Link to="/">Home</Link></nav>
-          <nav className={MenuStyle.menu}><Link to="/counter">Counter</Link></nav>
-          <nav className={MenuStyle.menu}><Link to="/redux">Redux</Link></nav>
-          <nav className={MenuStyle.menu}><Link to="/apitesting">Rtk</Link></nav>
+          <nav className={MenuStyle.menu}><Link to="/">
+            Home
+          </Link></nav>
+          <nav className={MenuStyle.menu}><Link to="/counter">
+            Counter
+          </Link></nav>
+          <nav className={MenuStyle.menu}><Link to="/redux">
+            Redux
+          </Link></nav>
+          <nav className={MenuStyle.menu}><Link to="/apitesting">
+            Rtk
+          </Link></nav>
         </div>
 
         <Routes>

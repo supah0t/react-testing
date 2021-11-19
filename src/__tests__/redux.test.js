@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, userEvent } from '../test-utils';
+import { render, screen, fireEvent, userEvent } from '../utils/test-utils';
 import '@testing-library/jest-dom'
 
 import Counter from '../features/counter/Counter';

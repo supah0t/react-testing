@@ -10,8 +10,6 @@ module.exports = {
     publicPath: '/'
   },
   mode: 'production',
-  //Is this usefull??
-  devtool: 'source-map',
   resolve: {
     extensions: ['*', '.js', '.jsx'],
   },
