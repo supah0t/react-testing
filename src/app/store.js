@@ -24,7 +24,7 @@ export default configureStore({
   },
   //middleware,
   middleware: (getDefaultMiddleware) => 
-    getDefaultMiddleware().concat(epicMiddleware).concat(sagaMiddleware),
+    getDefaultMiddleware().concat(epicMiddleware),
 });
 
 //sagaMiddleware.run(mySaga);

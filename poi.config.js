@@ -1,0 +1,3 @@
+module.exports = {
+  reactRefresh: true
+}
