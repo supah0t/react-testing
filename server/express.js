@@ -1,23 +1,26 @@
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const port = 3000
+const port = 8000;
 
 app.use((req, res, next) => {
-  console.log(req.url);
-  next();
+    console.log(req.url);
+    next();
 });
 
+app.use(cors());
+
 app.get('/api', (req, res) => {
-  res.json({message: "Hello, api working"});
+    res.json({ message: 'Hello, api working' });
 });
 
 //app.get('/*', function(req, res) {
-  //res.sendFile(path.join(__dirname, '../dist/index.html'), function(err) {
-    //if (err) {
-      //res.status(500).send(err)
-    //}
-  //})
+//res.sendFile(path.join(__dirname, '../dist/index.html'), function(err) {
+//if (err) {
+//res.status(500).send(err)
+//}
+//})
 //})
 
 app.use(express.static('dist'));
@@ -29,5 +32,5 @@ app.use('/static', express.static(path.join(__dirname, 'dist')));
 */
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`Example app listening at http://localhost:${port}`);
 });

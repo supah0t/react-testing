@@ -6,7 +6,7 @@ import { createEpicMiddleware } from 'redux-observable';
 import { rootEpic, rootReducer } from '../components/ReduxObservable';
 
 import counterReducer from '../features/counter/counterSlice';
-import { pokemonApi } from '../features/apiFetch/apiFetchSlice';
+import { pokemonApi, myServerApi } from '../features/apiFetch/apiFetchSlice';
 
 const epicMiddleware = createEpicMiddleware();
 
@@ -14,17 +14,18 @@ const epicMiddleware = createEpicMiddleware();
 //const middleware =[...getDefaultMiddleware(), sagaMiddleware];
 
 export default configureStore({
-  reducer: {
-    //Adds the generated reducer
-    [pokemonApi.reducerPath]: pokemonApi.reducer,
+    reducer: {
+        //Adds the generated reducer
+        [pokemonApi.reducerPath]: pokemonApi.reducer,
+        [myServerApi.reducerPath]: myServerApi.reducer,
 
-    counter: counterReducer,
+        counter: counterReducer,
 
-    rootReducer,
-  },
-  //middleware,
-  middleware: (getDefaultMiddleware) => 
-    getDefaultMiddleware().concat(epicMiddleware),
+        rootReducer,
+    },
+    //middleware,
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware().concat(epicMiddleware),
 });
 
 //sagaMiddleware.run(mySaga);

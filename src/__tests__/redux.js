@@ -12,8 +12,3 @@ test('can render redux', () => {
 
   expect(screen.getByTestId('count-value')).toHaveTextContent('1');
 })
-
-
-
-
-

@@ -8,6 +8,17 @@ export const pokemonApi = createApi({
       query: (name) => `pokemon/${name}`,
     }),
   }),
-})
+});
 
-export const { useGetPokemonByNameQuery } = pokemonApi
+export const myServerApi = createApi({
+  reducerPath: 'myServerApi',
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8000/api' }),
+  endpoints: (builder) => ({
+    default: builder.query({
+      query: () => `/`,
+    }),
+  }),
+});
+
+export const { useGetPokemonByNameQuery } = pokemonApi;
+export const { useDefaultQuery } = myServerApi;
